@@ -1,5 +1,4 @@
 ---
-title: "Benchmark rolling functions"
 format: html
 editor: visual
 ---
