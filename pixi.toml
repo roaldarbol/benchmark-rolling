@@ -1,0 +1,23 @@
+[project]
+name = "rolling-data-table"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Your Name <and@email>"]
+channels = ["conda-forge", "https://prefix.dev/r-forge/"]
+platforms = ['osx-64']
+
+[tasks]
+
+[dependencies]
+r-base = "4.4.*"
+rust = ">=1.81.0,<2"
+r-renv = ">=1.0.9,<2"
+
+[target.osx-64.tasks]
+rstudio = "open rolling-data-table.Rproj"
+
+[activation.env]
+PIXI_R_LIBS = "$CONDA_PREFIX/lib/R/library"
+R_LIBS_USER = "$PIXI_R_LIBS"
+R_LIBS = "$PIXI_R_LIBS"
+R_DEFAULT_PACKAGES = ""
